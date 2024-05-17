@@ -4,6 +4,7 @@ import { Container, Row } from 'reactstrap'
 import { NavLink } from 'react-router-dom' // NavLink'i doğru kütüphaneden import ediyoruz
 import logo from '../../assets/images/eco-logo.png'
 import userIcon from '../../assets/images/user-icon.png'
+import {motion} from 'framer-motion'
 
 const Header = () => {
   const nav_links = [
@@ -48,12 +49,14 @@ const Header = () => {
             <div className="nav_icons">
               <span className='fav_icon'>
                 <i className="ri-heart-line"></i>
+                <span className="badge">2</span>
               </span>
               <span className='cart_icon'>
                 <i className="ri-shopping-cart-2-line"></i>
+                <span className="badge">3</span>
               </span>
               <span>
-                <img src={userIcon} alt="" />
+                <motion.img whileTap={{scale:1.2}} src={userIcon} alt="" />
               </span>
             </div>
 

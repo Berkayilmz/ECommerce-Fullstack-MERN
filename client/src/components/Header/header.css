@@ -47,9 +47,32 @@
 }
 
 .nav_icons span i{
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     color: var(--primary-color);
     cursor: pointer;
+}
+
+.cart_icon,
+.fav_icon{
+    position: relative;
+}
+
+.badge{
+    position:absolute;
+    top: 25%;
+    width: 15px;
+    height: 15px;
+    left: 40%;
+    content: '';
+    background-color: var(--primary-color);
+    color: #fff;
+    border-radius: 50%;
+    font-size: .7rem;
+    font-weight:600;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .nav_icons span img{
