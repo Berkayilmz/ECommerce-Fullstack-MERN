@@ -1,26 +1,26 @@
 const serviceData = [
   {
     icon: "ri-truck-line",
-    title: "Free Shipping",
-    subtitle: "Lorem ipsum dolor sit amet.",
+    title: "Ücretsiz Kargo",
+    subtitle: "3000TL ve üzeri alışverişlerinizde.",
     bg: "#fdefe6",
   },
   {
     icon: "ri-refresh-line",
-    title: "Easy Returns",
-    subtitle: "Lorem ipsum dolor sit amet.",
+    title: "Kolay İade",
+    subtitle: "Hızlı ve kolay iade seçenekleri.",
     bg: "#ceebe9",
   },
   {
     icon: "ri-secure-payment-line",
-    title: "Secure Payment",
-    subtitle: "Lorem ipsum dolor sit amet.",
+    title: "Güvenli Ödeme",
+    subtitle: "Kart bilgileriniz depolanmaz ve paylaşılmaz.",
     bg: "#e2f2b2",
   },
   {
     icon: "ri-exchange-dollar-line",
-    title: " Back Guarantee",
-    subtitle: "Lorem ipsum dolor sit amet.",
+    title: "Kaliteli Ürünler",
+    subtitle: "Satışlarımızda müşteri memnuniyeti ön plandadır.",
     bg: "#d6e5fb",
   },
 ];

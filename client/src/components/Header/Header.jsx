@@ -10,7 +10,7 @@ const Header = () => {
   const nav_links = [
     {
       path: 'home',
-      display: 'Home'
+      display: 'Anasayfa'
     },
     {
       path: 'shop',
@@ -18,7 +18,7 @@ const Header = () => {
     },
     {
       path: 'cart',
-      display: 'Cart'
+      display: 'Sepet'
     },
   ]
 
