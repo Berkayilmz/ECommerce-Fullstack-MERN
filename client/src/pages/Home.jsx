@@ -105,7 +105,7 @@ const Home = () => {
         </section>
 
       </Helmet>
-
+      
     </>
   )
 }
