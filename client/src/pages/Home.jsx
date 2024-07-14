@@ -23,6 +23,9 @@ const Home = () => {
 
   const [trendingProducts, setTrendingProducts] = useState([])
   const [bestSalesProducts, setBestSalesProducts] = useState([])
+  const [mobileProducts, setMobileProducts] = useState([])
+  const [wirelessProducts, setWirelessProducts] = useState([])
+  const [popularProducts, setPopularProducts] = useState([])
 
   useEffect(() => {
     const filteredTrendingProducts = products.filter(
@@ -33,8 +36,23 @@ const Home = () => {
       (item) => item.category === 'sofa'
     )
 
+    const filteredMobileSalesProducts = products.filter(
+      (item) => item.category === 'mobile'
+    )
+
+    const filteredWirelessSalesProducts = products.filter(
+      (item) => item.category === 'wireless'
+    )
+
+    const filteredPopularProducts = products.filter(
+      (item) => item.category === 'watch'
+    )
+
     setTrendingProducts(filteredTrendingProducts)
     setBestSalesProducts(filteredBestSalesProducts)
+    setMobileProducts(filteredMobileSalesProducts)
+    setWirelessProducts(filteredWirelessSalesProducts)
+    setPopularProducts(filteredPopularProducts)
   }, [])
 
   return (
@@ -87,19 +105,47 @@ const Home = () => {
         <section className="timer_count">
           <Container>
             <Row>
-              <Col lg='6' md='6'>
+              <Col lg='6' md='12'>
                 <div className="clock_top-content">
                   <h4 className='text-white fs-6 mb-2'>Sınırlı süre için</h4>
                   <h3 className='text-white fs-5 mb-3'>Kaliteli Ürünler</h3>
                 </div>
                 <Clock/>
 
-                <motion.button whileTap={{scale:1.2}} className="shop_btn store_btn"><Link to={'/shop'}>Mağazayı Ziyaret Edin</Link></motion.button>
+                <motion.button 
+                  whileTap={{scale:1.2}} 
+                  className="shop_btn store_btn">
+                  <Link to={'/shop'}>Mağazayı Ziyaret Edin</Link>
+                </motion.button>
               </Col>
 
-              <Col lg='6' md='6' className='text-end'>
+              <Col lg='6' md='12' className='text-end counter__img'>
                 <img src={counterImg} alt="" />
               </Col>
+            </Row>
+          </Container>
+        </section>
+
+        <section className="new_arrivals">
+          <Container>
+            <Row>
+              <Col lg='12' className='text-center mb-5'>
+                <h2 className='section_title'>Yeni Gelenler</h2>
+              </Col>
+              <ProductsList data={mobileProducts} />
+              <ProductsList data={wirelessProducts} />
+            </Row>
+          </Container>
+        </section>
+
+        <section className="popular_category">
+          <Container>
+            <Row>
+              <Col lg='12' className='text-center mb-5'>
+                <h2 className='section_title'>Popüler Kategoriler</h2>
+              </Col>
+              <ProductsList data={popularProducts} />
+              <ProductsList data={bestSalesProducts} />
             </Row>
           </Container>
         </section>
